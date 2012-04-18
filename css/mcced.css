@@ -9,15 +9,54 @@ body {
   background-color: #fff;
 }
 
-/* Toolbar
+/* Template Classes
 -------------------------------------------------- */
-.mt_admin_toolbar .page-header {
+
+.mt_content_wrapper {
+  border: 2px solid #444;
+}
+/* Toolbar */
+.mt_toolbar .page-header {
   border-bottom: none;
+  padding: 0 0 5px 20px;
+}
+/* Content Body */
+.mt_content_body {
+  border-top: 2px solid #444;
+}
+.mt_aside {
+  border-right: 2px solid #444;
+}
+.mt_content {
+  width: 898px !important;
+  margin-left: 0px !important;
+}
+.mt_content .table {
+  border-bottom: 2px solid #444;
+  margin-bottom: 0;
+}
+.mt_content .table td,
+.mt_content .table th {
+  border-left: 1px solid #ddd;
+  vertical-align: middle;
+}
+.mt_content .table td:first-child,
+.mt_content .table th:first-child {
+  border-left: none;
+}
+.mt_content .table td p {
+  margin: 0;
+}
+.mt_content .pagination {
+  margin: 10px 0;
 }
 
 /* Misc
 -------------------------------------------------- */
 
+small {
+  font-size: 80% !important;
+}
 img {
   max-width: 100%;
 }

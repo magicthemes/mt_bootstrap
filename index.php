@@ -50,40 +50,37 @@
                 </div>
             </div>
 
-            <div class="row-fluid">
-                <div class="mt_toolbar span12">
-                    <div class="row-fluid mt_admin_toolbar">
-                        <div class="span9">
-                            <div class="page-header">
-                                <h1>Accounts <small>Manage user accounts for student or staff</small></h1>
-                            </div>
+            <div class="row-fluid mt_content_wrapper">
+                <div class="mt_toolbar row-fluid">
+                    <div class="span9">
+                        <div class="page-header">
+                            <h1>Accounts <small>Manage user accounts for student or staff</small></h1>
                         </div>
+                    </div>
 
-                        <div class="span3">
-                            <div class="btn-toolbar" style="margin-top: 20px !important;">
-                                <div class="btn-group">
-                                    <a href="#" class="btn btn-primary"><i class="icon-plus-sign icon-white"></i> New</a>
-                                    <a href="#" data-toggle="dropdown" class="btn btn-primary dropdown-toggle"><span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Student</a></li>
-                                        <li><a href="#">Teacher</a></li>
-                                    </ul>
-                                </div>
-                                <div class="btn-group">
-                                    <a href="#" class="btn btn-danger"><i class="icon-trash icon-white"></i> Delete</a>
-                                </div>
+                    <div class="span3">
+                        <div class="btn-toolbar" style="margin-top: 20px !important;">
+                            <div class="btn-group">
+                                <a href="#" class="btn btn-primary"><i class="icon-plus-sign icon-white"></i> New</a>
+                                <a href="#" data-toggle="dropdown" class="btn btn-primary dropdown-toggle"><span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Student</a></li>
+                                    <li><a href="#">Teacher</a></li>
+                                </ul>
+                            </div>
+                            <div class="btn-group">
+                                <a href="#" class="btn btn-danger"><i class="icon-trash icon-white"></i> Delete</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row-fluid mt_content_body">
                     <div class="mt_aside span3">
                         <div class="sidebar-nav">
                             <ul class="nav nav-list">
                                 <li class="nav-header">Filters</li>
                                 <li class="active"><a href="#"><i class="icon-home"></i>Students</a></li>
                                 <li><a href="#"><i class="icon-book"></i>Teachers</a></li>
-                                <li><a href="#"><i class="icon-pencil"></i>Others</a></li>
                                 <li class="nav-header">Programs</li>
                                 <li><a href="#"><i class="icon-user"></i>FLES</a></li>
                                 <li><a href="#"><i class="icon-book"></i>Big Learning</a></li>
@@ -93,7 +90,7 @@
                     </div>
 
                     <div class="mt_content span9">
-                        <table class="table table-condensed table-striped">
+                        <table class="table table-striped">
                             <thead>
                                 <tr>
                                     <th width="3%"><input type="checkbox" name="checkAll" /></th>
@@ -112,7 +109,10 @@
                                     <td>
                                         <input type="checkbox" name="check" value="thisID" />
                                     </td>
-                                    <td>Lorem</td>
+                                    <td>
+                                        <p>Lorem Ipsum</p>
+                                        <small>Web Dev</small>
+                                    </td>
                                     <td>30</td>
                                     <td>ipsum</td>
                                     <td style="text-align: center;"><i class="icon-ok-sign"></i></td>
@@ -146,7 +146,7 @@
 
             <!-- Footer -->
             <footer class="footer">
-                <p class="pull-right"><a href="#">Back to top</a></p>
+                <!--<p class="pull-right"><i class="icon-arrow-up"></i><a href="#">Back to top</a></p>-->
             </footer>
         
         </div><!-- end container -->
@@ -169,6 +169,8 @@
         <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/themes/bootstrap/js/bootstrap-carousel.js"></script>
         <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/themes/bootstrap/js/bootstrap-typeahead.js"></script>
         <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/themes/bootstrap/js/application.js"></script>
+
+        <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/jquery.equalheights.js"></script>
 
     </body>
 </html>

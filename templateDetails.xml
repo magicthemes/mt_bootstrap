@@ -40,7 +40,7 @@
 	
 	<config>
 		<fields name="params">
-			<fieldset name="TEMPLATE">
+			<fieldset name="advanced">
 				<field name="test" type="radio" default="0" label="Test Field" description="Testing params">
 					<option value="0">No</option>
 					<option value="1">Yes</option>
