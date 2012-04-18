@@ -44,6 +44,35 @@
                                 <li class=""><a href="#">Accounts</a></li>
                                 <li class=""><a href="#">Reports</a></li>
                                 <li class=""><a href="#">Links</a></li>
+                                <li class="dropdown">
+                                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">Dropdown <b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li class="nav-header">Nav header</li>
+                                        <li><a href="#">Separated link</a></li>
+                                        <li><a href="#">One more separated link</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <form action="" class="navbar-search pull-left">
+                                <input type="text" placeholder="Search" class="search-query span2">
+                            </form>
+                            <ul class="nav pull-right">
+                                <li><a href="#">Link</a></li>
+                                <li class="divider-vertical"></li>
+                                <li class="dropdown">
+                                <a data-toggle="dropdown" class="dropdown-toggle" href="#">Dropdown <b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Separated link</a></li>
+                                    </ul>
+                                </li>
                             </ul>
                         </div>
                     </div>

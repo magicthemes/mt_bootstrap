@@ -35,6 +35,11 @@ body {
   border-bottom: 2px solid #444;
   margin-bottom: 0;
 }
+.mt_content .table thead {
+  background: #ddd;
+  color: #444;
+}
+
 .mt_content .table td,
 .mt_content .table th {
   border-left: 1px solid #ddd;
