@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/mcced.css" type="text/css" />
         <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/themes/bootstrap/css/bootstrap.css" type="text/css" />
         <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/themes/bootstrap/css/bootstrap-responsive.css" type="text/css" />
+        <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/themes/bootstrap/css/docs.css" type="text/css" />
         <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/themes/bootstrap/js/google-code-prettify/prettify.css" type="text/css" />
 
         <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -30,18 +31,16 @@
     <body data-spy="scroll" data-target=".subnav" data-offset="50">
 
         <div class="container">
-
             <!-- Navigation -->
             <div class="mt_mainnav navbar">
                 <div class="navbar-inner">
                     <div class="container">
-
                         <a class="brand" href="./">MCCED</a>
 
                         <div class="nav-collapse">
                             <ul class="nav">
-                                <li class="active"><a href="./">Home</a></li>
-                                <li class=""><a href="#">Accounts</a></li>
+                                <li class=""><a href="./">Home</a></li>
+                                <li class="active"><a href="#">Accounts</a></li>
                                 <li class=""><a href="#">Reports</a></li>
                                 <li class=""><a href="#">Links</a></li>
                                 <li class="dropdown">
@@ -57,9 +56,11 @@
                                     </ul>
                                 </li>
                             </ul>
+
                             <form action="" class="navbar-search pull-left">
                                 <input type="text" placeholder="Search" class="search-query span2">
                             </form>
+
                             <ul class="nav pull-right">
                                 <li><a href="#">Link</a></li>
                                 <li class="divider-vertical"></li>
@@ -79,97 +80,24 @@
                 </div>
             </div>
 
-            <div class="row-fluid mt_content_wrapper">
-                <div class="mt_toolbar row-fluid">
-                    <div class="span9">
-                        <div class="page-header">
-                            <h1>Accounts <small>Manage user accounts for student or staff</small></h1>
-                        </div>
-                    </div>
-
-                    <div class="span3">
-                        <div class="btn-toolbar" style="margin-top: 20px !important;">
-                            <div class="btn-group">
-                                <a href="#" class="btn btn-primary"><i class="icon-plus-sign icon-white"></i> New</a>
-                                <a href="#" data-toggle="dropdown" class="btn btn-primary dropdown-toggle"><span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Student</a></li>
-                                    <li><a href="#">Teacher</a></li>
-                                </ul>
-                            </div>
-                            <div class="btn-group">
-                                <a href="#" class="btn btn-danger"><i class="icon-trash icon-white"></i> Delete</a>
-                            </div>
-                        </div>
+            <div class="row-fluid">
+                <div class="mt_sidebar span2">
+                    <div class="sidebar-nav">
+                        <ul class="nav nav-list">
+                            <li class="nav-header">Filters</li>
+                            <li><a href="#"><i class="icon-home"></i>Students</a></li>
+                            <li><a href="#"><i class="icon-book"></i>Teachers</a></li>
+                            <li class="nav-header">Programs</li>
+                            <li><a href="#"><i class="icon-user"></i>FLES</a></li>
+                            <li><a href="#"><i class="icon-book"></i>Big Learning</a></li>
+                            <li><a href="#"><i class="icon-cog"></i>Hands On Science</a></li>
+                        </ul>
                     </div>
                 </div>
-                <div class="row-fluid mt_content_body">
-                    <div class="mt_aside span3">
-                        <div class="sidebar-nav">
-                            <ul class="nav nav-list">
-                                <li class="nav-header">Filters</li>
-                                <li class="active"><a href="#"><i class="icon-home"></i>Students</a></li>
-                                <li><a href="#"><i class="icon-book"></i>Teachers</a></li>
-                                <li class="nav-header">Programs</li>
-                                <li><a href="#"><i class="icon-user"></i>FLES</a></li>
-                                <li><a href="#"><i class="icon-book"></i>Big Learning</a></li>
-                                <li><a href="#"><i class="icon-cog"></i>Hands On Science</a></li>
-                            </ul>
-                        </div>
-                    </div>
 
-                    <div class="mt_content span9">
-                        <table class="table table-striped">
-                            <thead>
-                                <tr>
-                                    <th width="3%"><input type="checkbox" name="checkAll" /></th>
-                                    <th width="50%">
-                                        <span>Name</span>
-                                        <br/>
-                                        <small>(Job Title)</small>
-                                    </th>
-                                    <th width="5%">Age</th>
-                                    <th width="15%">Nickname</th>
-                                    <th width="5%">Employee</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <input type="checkbox" name="check" value="thisID" />
-                                    </td>
-                                    <td>
-                                        <p>Lorem Ipsum</p>
-                                        <small>Web Dev</small>
-                                    </td>
-                                    <td>30</td>
-                                    <td>ipsum</td>
-                                    <td style="text-align: center;"><i class="icon-ok-sign"></i></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input type="checkbox" name="check" value="thisID" />
-                                    </td>
-                                    <td>Lorem</td>
-                                    <td>30</td>
-                                    <td>ipsum</td>
-                                    <td style="text-align: center;"><i class="icon-minus-sign"></i></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div class="pagination pagination-centered">
-                            <ul>
-                                <li class="disabled"><a href="#">«</a></li>
-                                <li class="active">
-                                    <a href="#">1</a>
-                                </li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">»</a></li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="mt_content_wrapper span10">
+                    <jdoc:include type="message" />
+                    <jdoc:include type="component" />
                 </div>
             </div>
 
@@ -177,7 +105,6 @@
             <footer class="footer">
                 <!--<p class="pull-right"><i class="icon-arrow-up"></i><a href="#">Back to top</a></p>-->
             </footer>
-        
         </div><!-- end container -->
 
         <!-- Javascript -->

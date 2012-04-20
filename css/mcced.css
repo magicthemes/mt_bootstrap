@@ -1,53 +1,38 @@
-/* Add additional stylesheets below
--------------------------------------------------- */
-
 /* Body and structure
 -------------------------------------------------- */
 body {
-  position: relative;
-  padding-top: 10px;
-  background-color: #fff;
+  padding-top: 10px !important;
+  background: #fff !important;
 }
 
 /* Template Classes
 -------------------------------------------------- */
 
 .mt_content_wrapper {
-  border: 2px solid #444;
 }
 /* Toolbar */
 .mt_toolbar .page-header {
   border-bottom: none;
-  padding: 0 0 5px 20px;
 }
 /* Content Body */
 .mt_content_body {
-  border-top: 2px solid #444;
 }
 .mt_aside {
-  border-right: 2px solid #444;
 }
 .mt_content {
-  width: 898px !important;
-  margin-left: 0px !important;
 }
 .mt_content .table {
-  border-bottom: 2px solid #444;
   margin-bottom: 0;
 }
 .mt_content .table thead {
-  background: #ddd;
-  color: #444;
 }
 
 .mt_content .table td,
 .mt_content .table th {
-  border-left: 1px solid #ddd;
   vertical-align: middle;
 }
 .mt_content .table td:first-child,
 .mt_content .table th:first-child {
-  border-left: none;
 }
 .mt_content .table td p {
   margin: 0;
@@ -58,202 +43,3 @@ body {
 
 /* Misc
 -------------------------------------------------- */
-
-small {
-  font-size: 80% !important;
-}
-img {
-  max-width: 100%;
-}
-
-/* Make tables spaced out a bit more */
-h2 + table,
-h3 + table,
-h4 + table,
-h2 + .row {
-  margin-top: 5px;
-}
-
-/* Remove bottom margin on example forms in wells */
-form.well {
-  padding: 14px;
-}
-
-/* Tighten up spacing */
-.well hr {
-  margin: 18px 0;
-}
-
-/* Icons
-------------------------- */
-.the-icons {
-  margin-left: 0;
-  list-style: none;
-}
-.the-icons i:hover {
-  background-color: rgba(255,0,0,.25);
-}
-
-/* Responsive table
-------------------------- */
-.responsive-utilities th small {
-  display: block;
-  font-weight: normal;
-  color: #999;
-}
-.responsive-utilities tbody th {
-  font-weight: normal;
-}
-.responsive-utilities td {
-  text-align: center;
-}
-.responsive-utilities td.is-visible {
-  color: #468847;
-  background-color: #dff0d8 !important;
-}
-.responsive-utilities td.is-hidden {
-  color: #ccc;
-  background-color: #f9f9f9 !important;
-}
-
-/* Responsive tests
-------------------------- */
-.responsive-utilities-test {
-  margin-top: 5px;
-  margin-left: 0;
-  list-style: none;
-  overflow: hidden; /* clear floats */
-}
-.responsive-utilities-test li {
-  position: relative;
-  float: left;
-  width: 25%;
-  height: 43px;
-  font-size: 14px;
-  font-weight: bold;
-  line-height: 43px;
-  color: #999;
-  text-align: center;
-  border: 1px solid #ddd;
-  -webkit-border-radius: 4px;
-     -moz-border-radius: 4px;
-          border-radius: 4px;
-}
-.responsive-utilities-test li + li {
-  margin-left: 10px;
-}
-.responsive-utilities-test span {
-  position: absolute;
-  top:    -1px;
-  left:   -1px;
-  right:  -1px;
-  bottom: -1px;
-  -webkit-border-radius: 4px;
-     -moz-border-radius: 4px;
-          border-radius: 4px;
-}
-.responsive-utilities-test span {
-  color: #468847;
-  background-color: #dff0d8;
-  border: 1px solid #d6e9c6;
-}
-
-
-/* Responsive Docs
--------------------------------------------------- */
-@media (max-width: 480px) {
-
-  /* Reduce padding above jumbotron */
-  body {
-    padding-top: 5px;
-  }
-
-  /* Change up some type stuff */
-  h2 {
-    margin-top: 27px;
-  }
-  h2 small {
-    display: block;
-    line-height: 18px;
-  }
-  h3 {
-    margin-top: 18px;
-  }
-
-  /* Modal example */
-  .modal-example .modal {
-    position: relative;
-    top: auto;
-    right: auto;
-    bottom: auto;
-    left: auto;
-  }
-
-}
-
-
-@media (max-width: 768px) {
-
-  /* Remove any padding from the body */
-  body {
-    padding-top: 0;
-  }
-
-
-  /* Popovers */
-  .large-bird {
-    display: none;
-  }
-  .popover-well .popover-wrapper {
-    margin-left: 0;
-  }
-
-  /* Space out the show-grid examples */
-  .show-grid [class*="span"] {
-    margin-bottom: 5px;
-  }
-
-  /* Unfloat the back to top link in footer */
-  .footer .pull-right {
-    float: none;
-  }
-  .footer p {
-    margin-bottom: 9px;
-  }
-
-}
-
-
-@media (min-width: 480px) and (max-width: 768px) {
-
-
-}
-
-
-@media (min-width: 768px) and (max-width: 980px) {
-
-  /* Remove any padding from the body */
-  body {
-    padding-top: 0;
-  }
-
-}
-
-
-@media (max-width: 980px) {
-
-  /* Unfloat brand */
-  .navbar-fixed-top .brand {
-    float: left;
-    margin-left: 0;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-  
-}
-
-
-/* LARGE DESKTOP SCREENS */
-@media (min-width: 1210px) {
-
-}
