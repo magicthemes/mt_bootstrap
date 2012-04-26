@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
 <extension version="2.5" type="template" client="site">
-	<name>mt_mcced</name>
+	<name>mt_bootstrap</name>
 	<creationDate>April 2012</creationDate>
 	<author>MagicThemes</author>
 	<copyright>Magicthemes</copyright>
@@ -12,8 +12,8 @@
 		<![CDATA[
 		<div id="magicthemes-installer-welcome" style="text-align:center;">
 			<br><br><br>
-			<h1>This Template Has Been Brought to you by: </h1><br> 
-			<a href="http://magicthemes.com" target="_new"><img src="../templates/mt_mcced/images/magicthemes.png" alt="MagicThemes"></a>
+			<h1>This Template Has Been Brought to you by: </h1><br>
+			<a href="http://magicthemes.com" target="_new"><img src="../templates/mt_bootstrap/images/magicthemes.png" alt="MagicThemes"></a>
 			<br><br>
 			<h3><a href="http://magicthemes.com" target="_new">MagicThemes.com</a> is a new Template Shop for Joomla that provides unique and creative Templates.</h3>
 			<h3> <a href="http://magicthemes.com" target="_new">Visit our website</a> to download more Free or Premium Templates.</h3>
@@ -37,7 +37,7 @@
 	<positions>
 		<position>mt-list</position>
 	</positions>
-	
+
 	<config>
 		<fields name="params">
 			<fieldset name="advanced">
