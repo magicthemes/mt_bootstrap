@@ -35,46 +35,8 @@
             <div class="mt_mainnav navbar">
                 <div class="navbar-inner">
                     <div class="container">
-                        <a class="brand" href="./">MCCED</a>
-
+                        <a class="brand" href="#">Logo</a>
                         <div class="nav-collapse">
-                            <ul class="nav">
-                                <li class=""><a href="./">Home</a></li>
-                                <li class="active"><a href="#">Accounts</a></li>
-                                <li class=""><a href="#">Reports</a></li>
-                                <li class=""><a href="#">Links</a></li>
-                                <li class="dropdown">
-                                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">Dropdown <b class="caret"></b></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Action</a></li>
-                                        <li><a href="#">Another action</a></li>
-                                        <li><a href="#">Something else here</a></li>
-                                        <li class="divider"></li>
-                                        <li class="nav-header">Nav header</li>
-                                        <li><a href="#">Separated link</a></li>
-                                        <li><a href="#">One more separated link</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-
-                            <form action="" class="navbar-search pull-left">
-                                <input type="text" placeholder="Search" class="search-query span2">
-                            </form>
-
-                            <ul class="nav pull-right">
-                                <li><a href="#">Link</a></li>
-                                <li class="divider-vertical"></li>
-                                <li class="dropdown">
-                                <a data-toggle="dropdown" class="dropdown-toggle" href="#">Dropdown <b class="caret"></b></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Action</a></li>
-                                        <li><a href="#">Another action</a></li>
-                                        <li><a href="#">Something else here</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#">Separated link</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
                         </div>
                     </div>
                 </div>
@@ -84,13 +46,7 @@
                 <div class="mt_sidebar span2">
                     <div class="sidebar-nav">
                         <ul class="nav nav-list">
-                            <li class="nav-header">Filters</li>
-                            <li><a href="#"><i class="icon-home"></i>Students</a></li>
-                            <li><a href="#"><i class="icon-book"></i>Teachers</a></li>
-                            <li class="nav-header">Programs</li>
-                            <li><a href="#"><i class="icon-user"></i>FLES</a></li>
-                            <li><a href="#"><i class="icon-book"></i>Big Learning</a></li>
-                            <li><a href="#"><i class="icon-cog"></i>Hands On Science</a></li>
+                            <li><a href="#"><i class="icon-home"></i>Home</a></li>
                         </ul>
                     </div>
                 </div>
@@ -108,7 +64,6 @@
         </div><!-- end container -->
 
         <!-- Javascript -->
-        <!-- Placed at the end of the document so the pages load faster -->
         <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
         <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/themes/bootstrap/js/jquery.js"></script>
         <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/themes/bootstrap/js/google-code-prettify/prettify.js"></script>
