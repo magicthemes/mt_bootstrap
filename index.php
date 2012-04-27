@@ -35,8 +35,9 @@
             <div class="mt_mainnav navbar">
                 <div class="navbar-inner">
                     <div class="container">
-                        <a class="brand" href="#">Logo</a>
+                        <a class="brand" href="./">Logo</a>
                         <div class="nav-collapse">
+                            <jdoc:include type="modules" name="mt-mainnav"/>
                         </div>
                     </div>
                 </div>
@@ -48,6 +49,7 @@
                         <ul class="nav nav-list">
                             <li><a href="#"><i class="icon-home"></i>Home</a></li>
                         </ul>
+                        <jdoc:include type="modules" name="mt-left"/>
                     </div>
                 </div>
 

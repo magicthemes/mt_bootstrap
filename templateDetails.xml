@@ -36,6 +36,8 @@
 	</files>
 	<positions>
 		<position>mt-list</position>
+		<position>mt-left</position>
+		<position>mt-mainnav</position>
 	</positions>
 
 	<config>
