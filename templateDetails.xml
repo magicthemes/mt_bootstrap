@@ -36,10 +36,12 @@
 	</files>
 	<positions>
 		<position>mt-breadcrumbs</position>
-		<position>mt-list</position>
 		<position>mt-left</position>
+		<position>mt-list</position>
+		<position>mt-login</position>
 		<position>mt-mainnav</position>
 		<position>mt-sidebarnav</position>
+		<position>mt-top</position>
 	</positions>
 
 	<config>

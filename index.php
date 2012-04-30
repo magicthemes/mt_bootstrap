@@ -31,6 +31,14 @@
     <body data-spy="scroll" data-target=".subnav" data-offset="50">
 
         <div class="container">
+            <div class="mt_top row-fluid">
+                <div class="span6">
+                    <jdoc:include type="modules" name="mt-top"/>
+                </div>
+                <div class="span6">
+                    <jdoc:include type="modules" name="mt-login"/>
+                </div>
+            </div>
             <!-- Navigation -->
             <div class="mt_mainnav navbar">
                 <div class="navbar-inner">

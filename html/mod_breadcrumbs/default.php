@@ -15,8 +15,8 @@ defined('_JEXEC') or die;
 			echo '<span class="showHere">' .JText::_('MOD_BREADCRUMBS_HERE').'</span>';
 		}
 	?>
-	<li>
-		<?php for ($i = 0; $i < $count; $i ++) :
+	<?php for ($i = 0; $i < $count; $i ++) :
+		?><li <?php if ($i == $count - 1) { echo 'active'; } ?>><?php
 			// If not the last item in the breadcrumbs add the separator
 			if ($i < $count -1) {
 				if (!empty($list[$i]->link)) {
@@ -37,6 +37,6 @@ defined('_JEXEC') or die;
 					echo $list[$i]->name;
 				echo '</span>';
 			}
-		endfor; ?>
-	</li>
+		?></li><?php
+	endfor; ?>
 </ul>
