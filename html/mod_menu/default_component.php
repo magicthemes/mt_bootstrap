@@ -17,9 +17,8 @@ if ($item->parent){
 	$data_toggle = 'data-toggle="dropdown"';
 	$caret =  '<b class="caret"></b>';
 }
-else {
-	$class = $item->anchor_css ? 'class="'.$item->anchor_css.'" ' : '';
-}
+
+$anchor_class = $item->anchor_css ? '<i class="'.$item->anchor_css.'"></i> ' : '';
 
 $title = $item->anchor_title ? 'title="'.$item->anchor_title.'" ' : '';
 if ($item->menu_image) {
@@ -32,14 +31,14 @@ else { $linktype = $item->title; }
 switch ($item->browserNav) :
 	default:
 	case 0:
-		?><a <?php echo $class; ?> <? if( $item->parent ) { echo $data_toggle; } ?>href="<?php echo $item->flink; ?>" <?php echo $title; ?>><?php echo $linktype; ?> <?php if( $item->parent ) { echo $caret; } ?></a><?php
+		?><a class="<?php if( $item->parent ) { echo $dropdown_class; } ?>" <?php if( $item->parent ) { echo $data_toggle; } ?>href="<?php echo $item->flink; ?>" <?php echo $title; ?>><?php echo $anchor_class; echo $linktype; ?> <?php if( $item->parent ) { echo $caret; } ?></a><?php
 		break;
 	case 1:
 		// _blank
-		?><a <?php echo $class; ?> <? if( $item->parent ) { echo $data_toggle; } ?>href="<?php echo $item->flink; ?>" target="_blank" <?php echo $title; ?>><?php echo $linktype; ?> <?php if( $item->parent ) { echo $caret; } ?></a><?php
+		?><a class="<?php if( $item->parent ) { echo $dropdown_class; } ?>" <?php if( $item->parent ) { echo $data_toggle; } ?>href="<?php echo $item->flink; ?>" target="_blank" <?php echo $title; ?>><?php echo $anchor_class; echo $linktype; ?> <?php if( $item->parent ) { echo $caret; } ?></a><?php
 		break;
 	case 2:
 		// window.open
-		?><a <?php echo $class; ?> <? if( $item->parent ) { echo $data_toggle; } ?>href="<?php echo $item->flink; ?>" onclick="window.open(this.href,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes');return false;" <?php echo $title; ?>><?php echo $linktype; ?> <?php if( $item->parent ) { echo $caret; } ?></a><?php
+		?><a <?php echo $class; ?> <? if( $item->parent ) { echo $data_toggle; } ?>href="<?php echo $item->flink; ?>" onclick="window.open(this.href,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes');return false;" <?php echo $title; ?>><?php echo $anchor_class; echo $linktype; ?> <?php if( $item->parent ) { echo $caret; } ?></a><?php
 		break;
 endswitch;

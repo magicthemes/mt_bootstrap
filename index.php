@@ -46,9 +46,6 @@
             <div class="row-fluid">
                 <div class="mt_sidebar span2">
                     <div class="sidebar-nav">
-                        <ul class="nav nav-list">
-                            <li><a href="#"><i class="icon-home"></i>Home</a></li>
-                        </ul>
                         <jdoc:include type="modules" name="mt-left"/>
                     </div>
                 </div>
