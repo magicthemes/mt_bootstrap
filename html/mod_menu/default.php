@@ -50,7 +50,7 @@ defined('_JEXEC') or die;
 			}
 
 			if ($item->type == 'separator'){
-				echo '<li class="divider"></li><li'.$class.'>';
+				echo '<li'.$class.'>';
 			}
 			else {
 				echo '<li'.$class.'>';
