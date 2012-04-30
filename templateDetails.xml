@@ -35,9 +35,11 @@
 		<folder>themes</folder>
 	</files>
 	<positions>
+		<position>mt-breadcrumbs</position>
 		<position>mt-list</position>
 		<position>mt-left</position>
 		<position>mt-mainnav</position>
+		<position>mt-sidebarnav</position>
 	</positions>
 
 	<config>

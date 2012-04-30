@@ -46,11 +46,13 @@
             <div class="row-fluid">
                 <div class="mt_sidebar span2">
                     <div class="sidebar-nav">
-                        <jdoc:include type="modules" name="mt-left"/>
+                        <jdoc:include type="modules" name="mt-sidebarnav"/>
                     </div>
+                    <jdoc:include type="modules" name="mt-left"/>
                 </div>
 
                 <div class="mt_content_wrapper span10">
+                    <jdoc:include type="modules" name="mt-breadcrumbs"/>
                     <jdoc:include type="message" />
                     <jdoc:include type="component" />
                 </div>
