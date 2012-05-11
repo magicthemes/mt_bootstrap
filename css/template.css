@@ -11,8 +11,8 @@ body {
 .mt_content_wrapper {
 }
 /* Toolbar */
-.mt_toolbar .page-header {
-  border-bottom: none;
+.mt_content_wrapper > menu.toolbar {
+	text-align: right;
 }
 /* Content Body */
 .mt_content_body {
