@@ -61,7 +61,7 @@
 
                 <div class="mt_content_wrapper span10">
                     <jdoc:include type="modules" name="mt-breadcrumbs"/>
-                    <jdoc:include type="message" />
+                    <jdoc:include type="message" style="xhtml"/>
                     <jdoc:include type="modules" name="toolbar"/>
                     <jdoc:include type="component" />
                 </div>
