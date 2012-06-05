@@ -3,14 +3,29 @@
 <html>
     <head>
         <?php $this->setGenerator('Joomla! 2.5 Template by MagicThemes.com'); ?>
+
         <meta http-equiv = "X-UA-Compatible" content = "IE=edge,chrome=1 " />
-        <jdoc:include type="head" />
+        <? /*<jdoc:include type="head" />*/ ?>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">
 
         <!-- styles -->
+        <?php $headData     = $this->getHeadData(); ?>
+        <?php $styleSheets  = $headData['styleSheets']; ?>
+        <?php $styles       = $headData['style']; ?>
+
+        <?php foreach ($styleSheets as $styleSrc => $styleAttr): ?>
+        <link rel="stylesheet" href="<?php echo $styleSrc;?>" />
+        <?php endforeach; ?>
+
+        <?php foreach ($styles as $styleType => $styleContent): ?>
+        <style type="<?php echo $styleType;?>">
+            <?php echo $styleContent; ?>
+        </style>
+        <?php endforeach; ?>
+
         <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/template.css" type="text/css" />
         <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/themes/bootstrap/css/bootstrap.css" type="text/css" />
         <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/themes/bootstrap/css/bootstrap-responsive.css" type="text/css" />
@@ -75,6 +90,7 @@
 
         <!-- Javascript -->
         <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+        <?php /*<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/themes/bootstrap/js/widgets.js"></script>*/?>
         <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/themes/bootstrap/js/jquery.js"></script>
         <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/themes/bootstrap/js/google-code-prettify/prettify.js"></script>
         <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/themes/bootstrap/js/bootstrap-transition.js"></script>
@@ -92,6 +108,21 @@
         <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/themes/bootstrap/js/application.js"></script>
 
         <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/jquery.equalheights.js"></script>
+
+        <script>jQuery.noConflict();</script>
+
+        <? $scripts     = $headData['scripts']; ?>
+        <? $script      = $headData['script']; ?>
+
+        <?php foreach ($scripts as $strSrc => $strAttr): ?>
+        <script src="<?php echo $strSrc;?>"></script>
+        <?php endforeach; ?>
+
+        <?php foreach($script as $scriptType => $scriptContent): ?>
+        <script type="<?php echo $scriptType;?>">
+            <?php echo $scriptContent; ?>
+        </script>
+        <?php endforeach; ?>
 
     </body>
 </html>
