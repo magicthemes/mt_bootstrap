@@ -3,6 +3,7 @@
 body {
   padding-top: 10px !important;
   background: #fff !important;
+  overflow-y: scroll;
 }
 
 /* Template Classes
