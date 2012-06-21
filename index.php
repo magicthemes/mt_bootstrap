@@ -67,14 +67,14 @@
             </div>
 
             <div class="row-fluid">
-                <div class="mt_sidebar span2">
+                <div class="mt_sidebar span3">
                     <div class="sidebar-nav">
                         <jdoc:include type="modules" name="mt-sidebarnav"/>
                     </div>
                     <jdoc:include type="modules" name="left"/>
                 </div>
 
-                <div class="mt_content_wrapper span10">
+                <div class="mt_content_wrapper span9">
                     <jdoc:include type="modules" name="mt-breadcrumbs"/>
                     <jdoc:include type="message" style="xhtml"/>
                     <jdoc:include type="modules" name="toolbar"/>
