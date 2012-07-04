@@ -54,7 +54,6 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </a>
-                    <a class="brand" href="./">MCCPTA EPI</a>
                     <div class="nav-collapse collapse">
                         <div class="nav-collapse">
                             <ul class="nav">
