@@ -45,51 +45,76 @@
     </head>
     <body data-spy="scroll" data-target=".subnav" data-offset="50">
 
-        <div class="container">
-            <div class="mt_top row-fluid">
-                <div class="span6">
-                    <jdoc:include type="modules" name="mt-top"/>
-                </div>
-                <div class="span6">
-                    <jdoc:include type="modules" name="mt-login"/>
+        <!-- Navigation -->
+        <div class="mt_mainnav navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="./">MCCPTA EPI</a>
+                    <div class="nav-collapse collapse">
+                        <div class="nav-collapse">
+                            <ul class="nav">
+                                <li><a href="index.php?option=com_mcced&view=dashboard">Dasboard</a></li>
+                                <li><a href="index.php?option=com_mcced&view=accounts">People</a></li>
+                                <li><a href="index.php?option=com_mcced&view=sites">Sites</a></li>
+                                <li><a href="index.php?option=com_mcced&view=classes">Classes</a></li>
+                                <li><a href="index.php?option=com_mcced&view=accounting">Accounting</a></li>
+                                <li><a href="index.php?option=com_mcced&view=calendar">Calendar</a></li>
+                            </ul>
+                            <div class="nav pull-right">
+                                <form class="navbar-search pull-left" action="">
+                                    <input type="text" class="search-query span2" placeholder="Search">
+                                </form>
+                                <ul class="nav">
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#accounts">
+                                            <i class="icon-user icon-white"></i> Profile <b class="caret"></b>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="accounts/new_account.html">Edit Profile</a></li>
+                                            <li><a href="#change-password" data-toggle="modal">Change Password</a></li>
+                                            <li><a href="login.html">Logout <i class="icon-off"></i></a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                      </div>
+                    </div>
                 </div>
             </div>
-            <!-- Navigation -->
-            <div class="mt_mainnav navbar">
-                <div class="navbar-inner">
-                    <div class="container">
-                        <a class="brand" href="./">Logo</a>
-                        <div class="nav-collapse">
-                            <jdoc:include type="modules" name="mt-mainnav"/>
+        </div>
+
+        <div class="container">
+            <section>
+                <div class="row">
+                    <div class="mt_sidebar span3">
+                        <div class="sidebar-nav">
+                            &nbsp;
+                            <jdoc:include type="modules" name="mt-sidebarnav"/>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="row-fluid">
-                <div class="mt_sidebar span3">
-                    <div class="sidebar-nav">
-                        <jdoc:include type="modules" name="mt-sidebarnav"/>
+                    <div class="mt_content_wrapper span9">
+                        <jdoc:include type="modules" name="mt-breadcrumbs"/>
+                        <jdoc:include type="message" style="xhtml"/>
+                        <jdoc:include type="modules" name="toolbar"/>
+                        <jdoc:include type="component" />
                     </div>
-                    <jdoc:include type="modules" name="left"/>
                 </div>
-
-                <div class="mt_content_wrapper span9">
-                    <jdoc:include type="modules" name="mt-breadcrumbs"/>
-                    <jdoc:include type="message" style="xhtml"/>
-                    <jdoc:include type="modules" name="toolbar"/>
-                    <jdoc:include type="component" />
-                </div>
-            </div>
+            </section>
 
             <!-- Footer -->
             <footer class="footer">
-                <!--<p class="pull-right"><i class="icon-arrow-up"></i><a href="#">Back to top</a></p>-->
+                <p class="pull-right">MCCPTA Educational Programs, Inc.</p>
             </footer>
         </div><!-- end container -->
 
         <!-- Javascript -->
-        <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+        <!--<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>-->
         <?php /*<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/themes/bootstrap/js/widgets.js"></script>*/?>
         <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/themes/bootstrap/js/jquery.js"></script>
         <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/themes/bootstrap/js/google-code-prettify/prettify.js"></script>
