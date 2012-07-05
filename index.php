@@ -203,7 +203,7 @@
 
         <script>
             jQuery(document).ready(function($){
-                var sidebarnav_content = $('.sidebar-nav').html().length; //default value = <jdoc:include type="modules" name="mt-sidebarnav"/>
+                var sidebarnav_content = $('.sidebar-nav').html().length;
                 if(sidebarnav_content === 54){
                     $('.mt_content_wrapper').removeClass('span9').addClass('span12');
                 }
