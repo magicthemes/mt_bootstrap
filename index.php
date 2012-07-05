@@ -59,7 +59,16 @@
                             <ul class="nav">
                                 <li><a href="index.php?option=com_mcced&view=dashboard">Dasboard</a></li>
                                 <li><a href="index.php?option=com_mcced&view=accounts">People</a></li>
-                                <li><a href="index.php?option=com_mcced&view=sites">Sites</a></li>
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Sites <b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="index.php?option=com_mcced&view=site"><i class="icon-plus"></i> Create a Site</a></li>
+                                        <li><a href="index.php?option=com_mcced&view=site&layout=import"><i class="icon-upload"></i> Import sites from spreadsheet</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#"><i class="icon-search"></i> Search Site</a></li>
+                                        <li><a href="index.php?option=com_mcced&view=sites"><i class="icon-list"></i> List Sites</a></li>
+                                    </ul>
+                                </li>
                                 <li class="dropdown">
                                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Classes <b class="caret"></b></a>
                                     <ul class="dropdown-menu">
@@ -70,11 +79,11 @@
                                         <li class="nav-header">Catalog Entries</li>
                                         <li><a href="index.php?option=com_mcced&view=catalog"><i class="icon-plus"></i> New Catalog Entry</a></li>
                                         <li><a href="#"><i class="icon-search"></i> Search Catalog</a></li>
-                                        <li><a href="index.php?option=com_mcced&view=catalogs"><i class="icon-inbox"></i> List Catalog Entries</a></li>
+                                        <li><a href="index.php?option=com_mcced&view=catalogs"><i class="icon-list"></i> List Catalog Entries</a></li>
                                         <li class="nav-header">Programs</li>
                                         <li><a href="index.php?option=com_mcced&view=program"><i class="icon-plus"></i> New Program</a></li>
                                         <li><a href="#"><i class="icon-search"></i> Search Program</a></li>
-                                        <li><a href="index.php?option=com_mcced&view=programs"><i class="icon-th-list"></i> List Programs</a></li>
+                                        <li><a href="index.php?option=com_mcced&view=programs"><i class="icon-list"></i> List Programs</a></li>
                                     </ul>
                                 <li>
                                 <li><a href="index.php?option=com_mcced&view=accounting">Accounting</a></li>
@@ -108,7 +117,6 @@
                 <div class="row">
                     <div class="mt_sidebar span3">
                         <div class="sidebar-nav">
-                            &nbsp;
                             <jdoc:include type="modules" name="mt-sidebarnav"/>
                         </div>
                     </div>
