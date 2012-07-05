@@ -26,6 +26,12 @@
         </style>
         <?php endforeach; ?>
 
+        <?php
+            $currenturl=JURI::getInstance()->toString();
+            $url_vars = parse_url($currenturl);
+            parse_str($url_vars['query']);
+        ?>
+
         <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/template.css" type="text/css" />
         <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/themes/bootstrap/css/bootstrap.css" type="text/css" />
         <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/themes/bootstrap/css/bootstrap-responsive.css" type="text/css" />
@@ -44,7 +50,6 @@
         <link rel="apple-touch-icon-precomposed" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/themes/bootstrap/ico/apple-touch-icon-57-precomposed.png">
     </head>
     <body data-spy="scroll" data-target=".subnav" data-offset="50">
-
         <!-- Navigation -->
         <div class="mt_mainnav navbar navbar-fixed-top">
             <div class="navbar-inner">
@@ -57,33 +62,72 @@
                     <div class="nav-collapse collapse">
                         <div class="nav-collapse">
                             <ul class="nav">
-                                <li><a href="index.php?option=com_mcced&view=dashboard">Dasboard</a></li>
-                                <li><a href="index.php?option=com_mcced&view=accounts">People</a></li>
-                                <li class="dropdown">
-                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Sites <b class="caret"></b></a>
+                                <li <?php if($view === 'dashboard') echo 'class="active"';?>><a href="index.php?option=com_mcced&view=dashboard">Dasboard</a></li>
+                                <li class="dropdown
+                                    <?php if($view === 'accounts'
+                                            || $view === 'parents'
+                                            || $view === 'students'
+                                            || $view === 'coordinators'
+                                            || $view === 'teachers'
+                                            || $view === 'staffs'
+                                            || $view === 'volunteers'
+                                            || $view === 'bookkeepers'
+                                            || $view === 'boardmembers'
+                                            || $view === 'administrators')
+                                        echo 'active';
+                                    ?>">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">People <b class="caret"></b></a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="index.php?option=com_mcced&view=site"><i class="icon-plus"></i> Create a Site</a></li>
-                                        <li><a href="index.php?option=com_mcced&view=site&layout=import"><i class="icon-upload"></i> Import sites from spreadsheet</a></li>
+                                        <li <?php if($view === 'account') echo 'class="active"';?>><a href="index.php?option=com_mcced&view=account"><i class="icon-plus"></i> Create New Account</a></li>
+                                        <li <?php if($view === 'accounts') echo 'class="active"';?>><a href="index.php?option=com_mcced&view=accounts"><i class="icon-list"></i> List All Accounts</a></li>
                                         <li class="divider"></li>
-                                        <li><a href="#"><i class="icon-search"></i> Search Site</a></li>
-                                        <li><a href="index.php?option=com_mcced&view=sites"><i class="icon-list"></i> List Sites</a></li>
+                                        <li><a href="#"><i class="icon-search"></i> Find People</a></li>
+                                        <li class="nav-header"></i> List By Account Type</li>
+                                        <li <?php if($view === 'parents') echo 'class="active"';?>><a href="index.php?option=com_mcced&view=parents">Parents</a></li>
+                                        <li <?php if($view === 'students') echo 'class="active"';?>><a href="index.php?option=com_mcced&view=students">Students</a></li>
+                                        <li class="nav-header"></i> Internal</li>
+                                        <li <?php if($view === 'coordinators') echo 'class="active"';?>><a href="index.php?option=com_mcced&view=coordinators">Coordinators</a></li>
+                                        <li <?php if($view === 'teachers') echo 'class="active"';?>><a href="index.php?option=com_mcced&view=teachers">Teachers</a></li>
+                                        <li <?php if($view === 'staffs') echo 'class="active"';?>><a href="index.php?option=com_mcced&view=staffs">Staff Members</a></li>
+                                        <li <?php if($view === 'volunteers') echo 'class="active"';?>><a href="index.php?option=com_mcced&view=volunteers">Volunteers</a></li>
+                                        <li <?php if($view === 'bookkeepers') echo 'class="active"';?>><a href="index.php?option=com_mcced&view=bookkeepers">Book Keepers</a></li>
+                                        <li <?php if($view === 'boardmembers') echo 'class="active"';?>><a href="index.php?option=com_mcced&view=boardmembers">Board Members</a></li>
+                                        <li <?php if($view === 'administrators') echo 'class="active"';?>><a href="index.php?option=com_mcced&view=administrators">Administrators</a></li>
                                     </ul>
                                 </li>
-                                <li class="dropdown">
+                                <li class="dropdown <?php if($view === 'site' || $view === 'sites') echo 'active';?>">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Sites <b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <li <?php if($view === 'site' && $layout != 'import') echo 'class="active"';?>><a href="index.php?option=com_mcced&view=site&layout=form"><i class="icon-plus"></i> Create a Site</a></li>
+                                        <li <?php if($view === 'site' && $layout == 'import') echo 'class="active"';?>><a href="index.php?option=com_mcced&view=site&layout=import"><i class="icon-upload"></i> Import sites from spreadsheet</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#"><i class="icon-search"></i> Search Site</a></li>
+                                        <li <?php if($view === 'sites') echo 'class="active"';?>><a href="index.php?option=com_mcced&view=sites"><i class="icon-list"></i> List Sites</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown
+                                    <?php if($view === 'class'
+                                            || $view === 'classes'
+                                            || $view === 'catalog'
+                                            || $view === 'catalogs'
+                                            || $view === 'program'
+                                            || $view === 'programs')
+                                        echo 'active';
+                                    ?>">
                                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Classes <b class="caret"></b></a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="index.php?option=com_mcced&view=catalogs"><i class="icon-plus"></i> Create a Class</a></li>
+                                        <li <?php if($view === 'class') echo 'class="active"';?>><a href="index.php?option=com_mcced&view=catalogs"><i class="icon-plus"></i> Create a Class</a></li>
                                         <li class="divider"></li>
                                         <li><a href="#"><i class="icon-search"></i> Search Classes</a></li>
-                                        <li><a href="index.php?option=com_mcced&view=classes"><i class="icon-list"></i> List Classes</a></li>
+                                        <li <?php if($view === 'classes') echo 'class="active"';?>><a href="index.php?option=com_mcced&view=classes"><i class="icon-list"></i> List Classes</a></li>
                                         <li class="nav-header">Catalog Entries</li>
-                                        <li><a href="index.php?option=com_mcced&view=catalog"><i class="icon-plus"></i> New Catalog Entry</a></li>
+                                        <li <?php if($view === 'catalog') echo 'class="active"';?>><a href="index.php?option=com_mcced&view=catalog"><i class="icon-plus"></i> New Catalog Entry</a></li>
                                         <li><a href="#"><i class="icon-search"></i> Search Catalog</a></li>
-                                        <li><a href="index.php?option=com_mcced&view=catalogs"><i class="icon-list"></i> List Catalog Entries</a></li>
+                                        <li <?php if($view === 'catalogs') echo 'class="active"';?>><a href="index.php?option=com_mcced&view=catalogs"><i class="icon-list"></i> List Catalog Entries</a></li>
                                         <li class="nav-header">Programs</li>
-                                        <li><a href="index.php?option=com_mcced&view=program"><i class="icon-plus"></i> New Program</a></li>
+                                        <li <?php if($view === 'program') echo 'class="active"';?>><a href="index.php?option=com_mcced&view=program"><i class="icon-plus"></i> New Program</a></li>
                                         <li><a href="#"><i class="icon-search"></i> Search Program</a></li>
-                                        <li><a href="index.php?option=com_mcced&view=programs"><i class="icon-list"></i> List Programs</a></li>
+                                        <li <?php if($view === 'programs') echo 'class="active"';?>><a href="index.php?option=com_mcced&view=programs"><i class="icon-list"></i> List Programs</a></li>
                                     </ul>
                                 <li>
                                 <li><a href="index.php?option=com_mcced&view=accounting">Accounting</a></li>
@@ -156,6 +200,15 @@
         <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/themes/bootstrap/js/application.js"></script>
 
         <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/jquery.equalheights.js"></script>
+
+        <script>
+            jQuery(document).ready(function($){
+                var sidebarnav_content = $('.sidebar-nav').html().length; //default value = <jdoc:include type="modules" name="mt-sidebarnav"/>
+                if(sidebarnav_content === 54){
+                    $('.mt_content_wrapper').removeClass('span9').addClass('span12');
+                }
+            });
+        </script>
 
         <script>jQuery.noConflict();</script>
 
