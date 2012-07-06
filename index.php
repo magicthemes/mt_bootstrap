@@ -145,7 +145,7 @@
                                             <i class="icon-user icon-white"></i> <?php echo JFactory::getUser()->name; ?> <b class="caret"></b>
                                         </a>
                                         <ul class="dropdown-menu">
-                                            <li><a href="accounts/new_account.html">Edit Profile</a></li>
+                                            <li><a href="index.php?option=com_mcced&view=account&joomla_user_id=<?php echo JFactory::getUser()->id; ?>">Edit Profile</a></li>
                                             <li><a href="index.php?option=com_users&view=reset">Change Password</a></li>
                                             <li><a href="<?php echo JRoute::_('index.php?option=com_users&amp;task=user.logout').'&amp;'.JUtility::getToken().'=1';?>">Logout <i class="icon-off"></i></a></li>
                                         </ul>
