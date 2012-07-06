@@ -12,7 +12,7 @@ defined('_JEXEC') or die;
 <div class="span4 offset4">
 	<form class="well" action="<?php echo JRoute::_('index.php?option=com_users&task=user.logout'); ?>" method="post">
 		<div class="alert alert-block alert-warning">
-			Are you sure you want to logout of the system?
+			Log out
 		</div>
 		<div class="clearfix">
 			<button type="submit" class="btn btn-warning btn-large pull-right"><?php echo JText::_('JLOGOUT'); ?></button>

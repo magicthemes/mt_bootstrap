@@ -147,7 +147,7 @@
                                         <ul class="dropdown-menu">
                                             <li><a href="accounts/new_account.html">Edit Profile</a></li>
                                             <li><a href="index.php?option=com_users&view=reset">Change Password</a></li>
-                                            <li><a href="./">Logout <i class="icon-off"></i></a></li>
+                                            <li><a href="<?php echo JRoute::_('index.php?option=com_users&amp;task=user.logout').'&amp;'.JUtility::getToken().'=1';?>">Logout <i class="icon-off"></i></a></li>
                                         </ul>
                                     </li>
                                 </ul>
