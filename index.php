@@ -26,12 +26,6 @@
         </style>
         <?php endforeach; ?>
 
-        <?php
-            $currenturl=JURI::getInstance()->toString();
-            $url_vars = parse_url($currenturl);
-            parse_str($url_vars['query']);
-        ?>
-
         <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/template.css" type="text/css" />
         <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/themes/bootstrap/css/bootstrap.css" type="text/css" />
         <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/themes/bootstrap/css/bootstrap-responsive.css" type="text/css" />
@@ -50,6 +44,14 @@
         <link rel="apple-touch-icon-precomposed" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/themes/bootstrap/ico/apple-touch-icon-57-precomposed.png">
     </head>
     <body data-spy="scroll" data-target=".subnav" data-offset="50">
+        <?php
+            if(!JFactory::getUser()->guest) :
+
+            $view = '';
+            $currenturl=JURI::getInstance()->toString();
+            $url_vars = parse_url($currenturl);
+            parse_str(@$url_vars['query']);
+        ?>
         <!-- Navigation -->
         <div class="mt_mainnav navbar navbar-fixed-top">
             <div class="navbar-inner">
@@ -140,21 +142,22 @@
                                 <ul class="nav">
                                     <li class="dropdown">
                                         <a class="dropdown-toggle" data-toggle="dropdown" href="#accounts">
-                                            <i class="icon-user icon-white"></i> Profile <b class="caret"></b>
+                                            <i class="icon-user icon-white"></i> <?php echo JFactory::getUser()->name; ?> <b class="caret"></b>
                                         </a>
                                         <ul class="dropdown-menu">
                                             <li><a href="accounts/new_account.html">Edit Profile</a></li>
-                                            <li><a href="#change-password" data-toggle="modal">Change Password</a></li>
-                                            <li><a href="login.html">Logout <i class="icon-off"></i></a></li>
+                                            <li><a href="index.php?option=com_users&view=reset">Change Password</a></li>
+                                            <li><a href="./">Logout <i class="icon-off"></i></a></li>
                                         </ul>
                                     </li>
                                 </ul>
                             </div>
-                      </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <? endif; ?>
 
         <div class="container">
             <section>
@@ -167,7 +170,9 @@
 
                     <div class="mt_content_wrapper span9">
                         <jdoc:include type="modules" name="mt-breadcrumbs"/>
-                        <jdoc:include type="message" style="xhtml"/>
+                        <div class="span8 offset2">
+                            <jdoc:include type="message" style="xhtml"/>
+                        </div>
                         <jdoc:include type="modules" name="toolbar"/>
                         <jdoc:include type="component" />
                     </div>
