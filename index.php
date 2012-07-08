@@ -64,7 +64,7 @@
                     <div class="nav-collapse collapse">
                         <div class="nav-collapse">
                             <ul class="nav">
-                                <li <?php if($view === 'dashboard') echo 'class="active"';?>><a href="index.php?option=com_mcced&view=dashboard">Dasboard</a></li>
+                                <li <?php if($view === 'dashboard') echo 'class="active"';?>><a href="index.php?option=com_mcced&view=dashboard">Dashboard</a></li>
                                 <li class="dropdown
                                     <?php if($view === 'accounts'
                                             || $view === 'parents'
